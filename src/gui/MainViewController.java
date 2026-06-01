@@ -73,6 +73,8 @@ public class MainViewController implements Initializable {
 			initialazingAction.accept(controller);
 		}
 		catch (IOException e) {
+			// LINHA ADICIONADA: Mostra o erro real detalhado no console do Eclipse
+			e.printStackTrace();
 			Alerts.showAlert("IO Exception", "Error loading view", e.getMessage(), AlertType.ERROR);
 		}
 	}
